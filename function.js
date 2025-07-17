@@ -46,6 +46,8 @@ function createDeleteButton() {
     const deleteBtn = document.createElement('button')
     deleteBtn.addEventListener('click', function() {
         
+        
+
         // Здесь код для удаления задачи
     });
     deleteBtn.textContent = 'delete task';
