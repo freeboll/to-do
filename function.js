@@ -10,7 +10,7 @@ function addTask(){
    const li = document.createElement('li');
 
 
-   const  checkBox= createCheckBox();
+   const  checkBox= createCheckBox(li);
    li.appendChild(checkBox);
 
 
@@ -32,8 +32,16 @@ function addTask(){
 
 
 // чекбокс
-function createCheckBox(){
+function createCheckBox(li){
     const checkBox = document.createElement('input')
+    checkBox.addEventListener('click',function(){
+        if (this.checked === true ){
+        li.style.backgroundColor = "lightgreen"
+        }else {
+            li.style.backgroundColor = ""
+
+        }
+    })
    checkBox.type = 'checkbox'
    checkBox.className = 'complete-checkbox'
    return checkBox;
@@ -45,6 +53,7 @@ function createCheckBox(){
 function createDeleteButton() {
     const deleteBtn = document.createElement('button')
     deleteBtn.addEventListener('click', function() {
+        this.parentNode.remove();
         
         
 

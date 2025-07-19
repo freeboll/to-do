@@ -76,6 +76,9 @@ header h1 {
     flex: 1;
     font-size: 16px;
     color: #333;
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .delete-task {
